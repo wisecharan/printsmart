@@ -15,13 +15,8 @@ export default function About() {
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink-400 to-pink-600"></div>
                   <div className="absolute inset-0 flex items-center justify-center p-4">
                     <div className="text-center">
-<<<<<<< HEAD
                       <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4">
-                      <img src="/Logo-01.jpg" alt="PrintSmart Logo" className="w-full h-full object-contain"/>
-=======
-                      <div className="w-24 h-24 sm:w-32 sm:h-32 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                        <span className="text-white text-4xl sm:text-5xl font-bold">P</span>
->>>>>>> 96c8281b73c200e7f89c8f6b1241edbb36311102
+                        <img src="/Logo-01.jpg" alt="PrintSmart Logo" className="w-full h-full object-contain" />
                       </div>
                       <span className="text-pink-600 text-3xl sm:text-4xl font-bold">PrintSmart</span>
                       <p className="text-gray-500 mt-1 text-sm sm:text-base">Est. 2024</p>
