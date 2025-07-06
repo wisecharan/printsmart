@@ -132,7 +132,7 @@ export default function Portfolio() {
                       hoveredItem === item.id ? 'opacity-100' : 'opacity-0'
                     }`}>
                       <a 
-                        href="#" 
+                        href="#contact" 
                         className="inline-flex items-center text-white hover:text-pink-200 transition-colors"
                       >
                         <span className="mr-2 text-sm font-medium">View Project</span>

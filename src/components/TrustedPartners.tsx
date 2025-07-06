@@ -1,20 +1,16 @@
 export default function TrustedPartners() {
   const partners = [
     {
-      name: "Nexus Financial",
-      logo: "https://placehold.co/200x80/f8fafc/94a3b8?text=Nexus+Financial&font=open-sans"
+      name: "Ritvik Kidney Centre & Androcare",
+      logo: "https://www.ritvikkidneycentre.com/images/ritvik-logo.png"
     },
     {
-      name: "Horizon Tech",
-      logo: "https://placehold.co/200x80/f8fafc/94a3b8?text=Horizon+Tech&font=open-sans"
+      name: "Akhila Bharathiya Vidyardhi Parishath",
+      logo: "https://app.diginweb.site/create/uploads/medialibrary/35c9a77abe_355.jpg"
     },
     {
-      name: "Stellar Media",
-      logo: "https://placehold.co/200x80/f8fafc/94a3b8?text=Stellar+Media&font=open-sans"
-    },
-    {
-      name: "Quantum Group",
-      logo: "https://placehold.co/200x80/f8fafc/94a3b8?text=Quantum+Group&font=open-sans"
+      name: "Aquatech Water Solutions",
+      logo: "https://app.diginweb.site/create/uploads/medialibrary/0726db9d13_355.png"
     },
   ];
 
@@ -23,7 +19,7 @@ export default function TrustedPartners() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900">
-            Trusted By Leading Brands
+          Trusted by Brands
           </h2>
         </div>
         

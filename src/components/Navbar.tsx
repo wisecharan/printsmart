@@ -25,13 +25,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold tracking-tight">
+        <a href="#hero" className="text-2xl font-bold tracking-tight">
           Print<span className="text-pink-600">Smart</span>
         </a>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-10">
-          <a href="#" className="text-gray-900 hover:text-pink-600 font-medium transition-colors nav-link">
+          <a href="#hero" className="text-gray-900 hover:text-pink-600 font-medium transition-colors nav-link">
             Home
           </a>
           <a href="#about" className="text-gray-900 hover:text-pink-600 font-medium transition-colors nav-link">

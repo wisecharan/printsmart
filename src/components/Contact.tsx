@@ -9,17 +9,37 @@ type FormData = {
 };
 
 export default function Contact() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    // In a real application, you would send this data to your backend
-    setTimeout(() => {
-      setIsSubmitted(true);
-      reset();
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1000);
+  const onSubmit = async (data: FormData) => {
+    setStatus('loading');
+    try {
+      const response = await fetch("http://localhost:8000/index.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams({
+          name: data.name,
+          message: data.message,
+          sendto: data.email,
+        }).toString()
+      });
+
+      const responseText = await response.text();
+      console.log("Server response:", responseText);
+
+      if (response.ok) {
+        setStatus('success');
+        reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -100,16 +120,29 @@ export default function Contact() {
                 
                 <button
                   type="submit"
-                  className="w-full bg-pink-600 hover:bg-pink-700 text-white py-4 px-6 rounded-xl text-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="w-full bg-pink-600 hover:bg-pink-700 text-white py-4 px-6 rounded-xl text-lg font-medium transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50"
+                  disabled={status === 'loading'}
                 >
                   <Send size={20} />
-                  <span>Send Message</span>
+                  <span>{status === 'loading' ? 'Sending...' : 'Send Message'}</span>
                 </button>
-                
-                {isSubmitted && (
+
+                {status === 'loading' && (
+                  <div className="flex items-center gap-2 text-blue-600 bg-blue-50 p-4 rounded-xl">
+                    <Send size={20} className="animate-pulse" />
+                    <span>Sending your message...</span>
+                  </div>
+                )}
+                {status === 'success' && (
                   <div className="flex items-center gap-2 text-green-600 bg-green-50 p-4 rounded-xl">
                     <Check size={20} />
-                    <span>Your message has been sent successfully! We'll be in touch soon.</span>
+                    <span>Your message has been sent successfully!</span>
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-xl">
+                    <Mail size={20} />
+                    <span>Failed to send message. Please try again later.</span>
                   </div>
                 )}
               </form>
@@ -175,4 +208,3 @@ export default function Contact() {
     </section>
   );
 }
-

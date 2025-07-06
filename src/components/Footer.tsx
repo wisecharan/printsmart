@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Youtube } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#hero" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
               <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
@@ -83,10 +83,12 @@ export default function Footer() {
         
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-center text-sm text-gray-500">
-           © 2025 PrintSmart. Website developed with expertise by<span className="font-medium text-pink-600">
-            <a href="https://wisecharan.github.io/cwkr/" target="_blank" rel="noopener noreferrer"> Cwkr</a>
+          © {currentYear} PrintSmart. Powered by
+          <span className="font-medium text-pink-600">
+          <a href="https://wisecharan.github.io/cwkr/" target="_blank" rel="noopener noreferrer"> Cwkr</a>
           </span>
           </p>
+
           <div className="flex space-x-6 text-sm text-gray-500">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
