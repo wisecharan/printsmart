@@ -4,20 +4,20 @@ const testimonials = [
   {
     quote: "PrintSmart delivered exceptional quality for our corporate brochures. Their attention to detail and premium finishes impressed our entire executive team.",
     name: "Sai Charan Puduthala",
-    role: "Web Developer, Cwkr.In",
+    role: "Web Developer, Cwkr & Co.",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQF702Z9DrxliQ/profile-displayphoto-shrink_200_200/B4DZaMjmAgHQAY-/0/1746114869141?e=2147483647&v=beta&t=xWvft4y3zJGJk2VujtFiZf8dQQ3IR_YW8B0vqe_BjvI"
   },
   {
-    quote: "Working with PrintPro transformed our product packaging. The quality and consistency across all materials helped elevate our brand in a competitive market.",
-    name: "Michael Chen",
-    role: "Product Manager, Natura Foods",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&h=200&q=80"
+    quote: "They made custom batches for our Origin Club. The print quality and consistency truly elevated our presentation and made a strong impression.",
+    name: "Origin Club",
+    role: "St. Peters Engg College, Hyd",
+    image: "https://media.licdn.com/dms/image/v2/D4D0BAQHRCj6LDld7dQ/company-logo_100_100/company-logo_100_100/0/1737621566109/spec_origin_logo?e=1757548800&v=beta&t=2KYSOi1vUoq51CeAcZgo1aNHGCaBJIgRAWTxe5SDH3E"
   },
   {
-    quote: "From business cards to large format banners, PrintPro has been our go-to printing partner for five years. Their consistency and reliability are unmatched.",
-    name: "Emily Rodriguez",
-    role: "Events Coordinator, Summit Conferences",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&h=200&q=80"
+    quote: "We are very happy with the printing services provided by PrintSmart. The quality of our hospital materials, from patient guides to banners was excellent.",
+    name: "Dr P Naveen Kumar",
+    role: "Urologist, Ritvik Andrology Centre",
+    image: "https://www.ritvikkidneycentre.com/images/dr-ritvik-2.jpg"
   }
 ];
 

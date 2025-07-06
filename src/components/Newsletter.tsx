@@ -6,35 +6,21 @@ export default function Newsletter() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  
-  // Client-side validation (kept from your original code)
-  if (!email.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i)) {
-    setError('Please enter a valid email address');
-    return;
-  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch('http://localhost:5000/api/newsletter', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    });
-    const result = await response.json();
-
-    if (result.success) {
-      setIsSubmitted(true);
-      setError('');
-      setEmail('');
-      setTimeout(() => setIsSubmitted(false), 5000);
-    } else {
-      setError(result.error || 'Subscription failed'); // Backend error (e.g., duplicate email)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address');
+      return;
     }
-  } catch (error) {
-    setError('Network error - please try again'); // Connection issues
-  }
-};
+
+    setIsSubmitted(true);
+    setError('');
+    setEmail('');
+
+    setTimeout(() => setIsSubmitted(false), 5000);
+  };
 
   return (
     <section className="py-12 md:py-16 px-4 md:px-12 bg-gradient-to-br from-pink-50 to-gray-50 relative overflow-hidden mobile-minimal">

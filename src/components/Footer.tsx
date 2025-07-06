@@ -1,8 +1,8 @@
-import { Instagram, Mail, MapPin, Phone, Youtube } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-12 bg-gray-900 text-white mobile-minimal">
       <div className="max-w-7xl mx-auto">
@@ -14,24 +14,28 @@ export default function Footer() {
             <p className="text-gray-400 mb-6 max-w-md">
               Premium printing services for businesses that demand excellence. Quality you can see and feel. From business essentials to large format displays, we bring your vision to life.
             </p>
+
+            {/* Only Instagram and Email Icons */}
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="https://www.instagram.com/printsmart_official"
                 className="text-gray-400 hover:text-pink-400 transition-colors w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram size={18} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="mailto:printsmart@gmail.com"
                 className="text-gray-400 hover:text-pink-400 transition-colors w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700"
-                aria-label="YouTube"
+                aria-label="Email"
               >
-                <Youtube size={18} />
+                <Mail size={18} />
               </a>
             </div>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
@@ -43,7 +47,7 @@ export default function Footer() {
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
@@ -55,7 +59,7 @@ export default function Footer() {
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Books & Catalogs</a></li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
@@ -65,31 +69,44 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail size={18} className="text-pink-400 mr-3 mt-1" />
-                <span className="text-gray-400">printsmart@gmail.com</span>
+                <a
+                  href="mailto:printsmart@gmail.com"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  printsmart@gmail.com
+                </a>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="text-pink-400 mr-3 mt-1" />
                 <span className="text-gray-400">TSHB shop No: 03, Vidyanagar SRT 47</span>
               </li>
             </ul>
-            
+
             <div className="mt-8">
               <h4 className="text-sm font-semibold text-gray-300 mb-3">Business Hours</h4>
-              <p className="text-gray-400">Monday-Saturday: 10am-8pm</p>
+              <p className="text-gray-400">Monday-Saturday: 10am–8pm</p>
               <p className="text-gray-400">Sunday: Closed</p>
             </div>
           </div>
         </div>
-        
+
+        {/* Bottom Footer Section */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-center text-sm text-gray-500">
-          © {currentYear} PrintSmart. Powered by
-          <span className="font-medium text-pink-600">
-          <a href="https://wisecharan.github.io/cwkr/" target="_blank" rel="noopener noreferrer"> Cwkr</a>
-          </span>
+            © {currentYear} PrintSmart. Powered by
+            <span className="font-medium text-pink-600">
+              <a
+                href="https://wisecharan.github.io/cwkr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {' '}
+                Cwkr
+              </a>
+            </span>
           </p>
 
-          <div className="flex space-x-6 text-sm text-gray-500">
+          <div className="flex space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
           </div>
@@ -98,5 +115,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
