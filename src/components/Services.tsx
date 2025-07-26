@@ -3,45 +3,26 @@ import { Book, FileCheck, FileText, Image, LayoutDashboard, Package, Palette, Pr
 const services = [
   {
     icon: <Printer size={24} />,
-    title: "Business Essentials",
-    description: "Professional business cards, letterheads, and stationery that make a lasting impression with premium paper stocks and finishes."
-  },
-  {
-    icon: <FileText size={24} />,
-    title: "Document Printing",
-    description: "High-resolution document printing services for reports, presentations, and manuals with precision binding options."
-  },
-  {
-    icon: <Image size={24} />,
-    title: "Large Format",
-    description: "Eye-catching banners, posters, and signage printed with vibrant colors on durable materials for indoor and outdoor use."
-  },
-  {
-    icon: <Package size={24} />,
-    title: "Packaging Solutions",
-    description: "Custom packaging designs with premium finishes and materials that enhance your product presentation and brand experience."
+    title: "Corporate Printing",
+    description: "Professional-grade printing for business cards, letterheads, and company documents."
   },
   {
     icon: <LayoutDashboard size={24} />,
     title: "Marketing Collateral",
-    description: "Brochures, flyers, and promotional materials designed to capture attention and communicate your message effectively."
+    description: "Brochures, flyers, and brand materials designed to make an impact."
   },
   {
-    icon: <Palette size={24} />,
-    title: "Custom Design",
-    description: "Professional graphic design services to create stunning visuals that align with your brand identity and marketing goals."
+    icon: <Package size={24} />,
+    title: "Branded Packaging",
+    description: "Custom packaging solutions to elevate your product’s presentation and brand."
   },
   {
     icon: <FileCheck size={24} />,
-    title: "Direct Mail",
-    description: "Targeted direct mail campaigns with personalized printing, addressing, and fulfillment services for maximum impact."
-  },
-  {
-    icon: <Book size={24} />,
-    title: "Books & Catalogs",
-    description: "Professional book and catalog printing with various binding options, paper types, and finishing touches."
+    title: "Direct Mail Campaigns",
+    description: "Targeted print-mail strategies that deliver your message with precision."
   }
 ];
+
 
 export default function Services() {
   return (

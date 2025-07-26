@@ -1,21 +1,20 @@
-import { Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { Instagram, Mail, MapPin, Phone, Gift } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-12 bg-gray-900 text-white mobile-minimal">
+    <footer className="pt-12 md:pt-20 pb-8 md:pb-12 px-4 md:px-12 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <a href="#" className="text-2xl font-bold tracking-tight inline-block mb-6">
+            <a href="#hero" className="text-2xl font-bold tracking-tight inline-block mb-6">
               Print<span className="text-pink-400">Smart</span>
             </a>
             <p className="text-gray-400 mb-6 max-w-md">
-              Premium printing services for businesses that demand excellence. Quality you can see and feel. From business essentials to large format displays, we bring your vision to life.
+              Premium printing services for businesses that demand excellence. Quality you can see and feel.
             </p>
 
-            {/* Only Instagram and Email Icons */}
             <div className="flex space-x-4">
               <a
                 href="https://www.instagram.com/printsmart_official"
@@ -40,28 +39,33 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               <li><a href="#hero" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li>
+                <a href="#gift-collab" className="flex items-center text-gray-400 hover:text-white transition-colors">
+                  <Gift size={16} className="mr-2 text-pink-400" />
+                  GiftSmart
+                </a>
+              </li>
               <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
-              <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#faq" className="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Business Essentials</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Large Format Printing</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Marketing Materials</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Custom Packaging</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Design Services</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Books & Catalogs</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Business Cards</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Brochures & Flyers</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Packaging</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Large Format</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Custom Design</a></li>
+              <li><a href="#pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone size={18} className="text-pink-400 mr-3 mt-1" />
@@ -90,27 +94,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Footer Section */}
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-center text-sm text-gray-500">
-            © {currentYear} PrintSmart. Powered by
-            <span className="font-medium text-pink-600">
-              <a
-                href="https://wisecharan.github.io/cwkr/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {' '}
-                Cwkr
-              </a>
-            </span>
+            © {currentYear} PrintSmart. All rights reserved.
           </p>
 
-          <div className="flex space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
+            <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+            <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
+            <a
+              href="https://www.linkedin.com/in/wisecharan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-pink-400 transition-colors"
+            >
+              Built by <span className="text-pink-400">Char</span>
+            </a>
           </div>
         </div>
+
       </div>
     </footer>
   );

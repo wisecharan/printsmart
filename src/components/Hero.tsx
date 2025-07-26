@@ -1,80 +1,144 @@
-import { useEffect } from 'react';
+'use client';
+
+import { useEffect, useRef } from 'react';
 
 export default function Hero() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Add animation class after component mounts
-    const elements = document.querySelectorAll('.animate-on-load');
-    setTimeout(() => {
-      elements.forEach(el => {
-        el.classList.add('is-animated');
-      });
-    }, 100);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const elements = entry.target.querySelectorAll('.animate-on-scroll');
+            elements.forEach((el, index) => {
+              setTimeout(() => {
+                el.classList.add('animate-fadeInUp');
+              }, index * 150);
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="hero" className="relative overflow-hidden bg-white mt-10 py-16 md:py-24 px-4 md:px-12">
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-        <div className="md:col-span-7 z-10">
-          <span className="inline-block px-4 py-2 bg-pink-50 text-pink-700 rounded-full text-sm font-medium mb-6 animate-on-load">
-            PREMIUM PRINTING SOLUTIONS
-          </span>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-on-load">
-            Elevate Your Brand<br />With Premium<br />Print Quality
-          </h1>
-
-          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl animate-on-load">
-            Exceptional printing services that combine precision craftsmanship with modern design to make your brand stand out.
-          </p>
-
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-on-load">
-            <a 
-              href="#contact" 
-              className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
-            >
-              Get Started
-            </a>
-            <a 
-              href="#services" 
-              className="bg-white text-gray-700 border border-gray-200 px-6 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition-all flex items-center justify-center gap-2"
-            >
-              Our Services
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
+    <section id="Hero" className="relative overflow-hidden py-16 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-white via-rose-50 to-gray-50">
+      {/* Background shapes - updated to match GiftSmart aesthetic */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-pink-50/60 to-rose-50/50" />
         
-        <div className="md:col-span-5 relative animate-on-load">
-          <div className="relative ml-auto max-w-sm bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <p className="text-sm text-gray-500">Print Order</p>
-                <p className="text-xs text-gray-400">July 2025</p>
-              </div>
-              <span className="text-green-600 text-xs font-medium bg-green-100 px-2 py-1 rounded-full">Completed</span>
+        {/* Blob shapes with reduced intensity */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-pink-100 rounded-full blur-xl opacity-15 mix-blend-multiply" />
+        <div className="absolute top-1/3 right-0 w-96 h-96 bg-pink-100 rounded-full blur-xl opacity-10 mix-blend-multiply" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-rose-100 rounded-full blur-xl opacity-10 mix-blend-multiply" />
+        
+        {/* Subtle dot grid overlay */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2716%27 height=%2716%27 viewBox=%270 0 16 16%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27%23e5e7eb%27 fill-opacity=%270.2%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%271%27/%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div ref={heroRef} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 inline-flex items-center px-4 py-2 bg-pink-50 border border-pink-100 text-pink-700 rounded-full text-xs font-semibold tracking-wider mb-2 uppercase">
+              <span className="w-2 h-2 bg-pink-500 rounded-full mr-2 animate-pulse" />
+              Industry-Leading Print Solutions
             </div>
 
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li className="flex justify-between">
-                <span>Business Cards</span>
-                <span>₹2,000</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Brochures (x500)</span>
-                <span>₹7,500</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Packaging Design</span>
-                <span>₹8,500</span>
-              </li>
-            </ul>
+            <h1 className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 text-4xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-pink-400">
+                Precision Meets Print
+              </span>{' '}
+              <br className="hidden sm:block" />
+              Empowering Brands with Impact
+            </h1>
 
-            <div className="border-t mt-4 pt-4 flex justify-between text-lg font-bold">
-              <span>Total</span>
-              <span>₹18,000</span>
+            <p className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 text-lg text-gray-600 leading-relaxed max-w-lg">
+              Elevate your brand with uncompromising quality and detail in every printed piece. Our cutting-edge technology delivers stunning results that captivate audiences.
+            </p>
+
+            {/* Buttons */}
+            <div className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#services"
+                className="relative px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-pink-600 to-pink-500 text-white font-medium rounded-lg hover:from-pink-700 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl text-center group overflow-hidden"
+              >
+                <span className="relative z-10">Explore Services</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-pink-700 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+              <a
+                href="#portfolio"
+                className="relative px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base bg-white border border-gray-200 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all shadow-sm hover:shadow-md text-center group overflow-hidden"
+              >
+                <span className="relative z-10">View Portfolio</span>
+                <span className="absolute inset-0 bg-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </a>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 pt-6 flex flex-col sm:flex-row gap-8 items-start sm:items-center">
+              <div className="flex items-center">
+                <div className="flex -space-x-3">
+                  {[1, 2, 3, 4].map((i) => (
+                    <img
+                      key={i}
+                      src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'women' : 'men'}/${i + 20}.jpg`}
+                      className="w-10 h-10 rounded-full border-2 border-white hover:-translate-y-1 transition-transform duration-200"
+                      alt="Client"
+                    />
+                  ))}
+                </div>
+                <span className="ml-4 text-sm font-medium text-gray-700">
+                  Trusted by Fortune 500
+                </span>
+              </div>
+              <div className="hidden sm:block w-px h-10 bg-gray-200" />
+              <div className="flex items-center space-x-2">
+                <div className="flex -space-x-2">
+                  {['#FF6B6B', '#4ECDC4', '#45B7D1', '#A78BFA'].map((color, i) => (
+                    <div 
+                      key={i}
+                      className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center"
+                      style={{ backgroundColor: color }}
+                    >
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm font-medium text-gray-700">
+                  Award-Winning Quality
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
+            {/* Main product image */}
+            <div className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 absolute top-0 right-0 w-full max-w-2xl z-10">
+              <img
+                src="public/hero.jpeg"
+                alt="Premium Print Product"
+                className="w-full h-auto drop-shadow-2xl rounded-2xl pointer-events-none animate-float"
+              />
+            </div>
+
+            {/* Decorative shapes - updated colors */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute w-64 h-64 bg-pink-100 rounded-full opacity-10 blur-xl left-0 top-0 mix-blend-multiply" />
+              <div className="absolute w-80 h-80 bg-rose-100 rounded-full opacity-10 blur-xl right-0 bottom-0 mix-blend-multiply" />
+              <div className="absolute w-96 h-96 bg-pink-50 rounded-full opacity-5 blur-xl left-1/4 top-1/3 mix-blend-multiply" />
             </div>
           </div>
         </div>

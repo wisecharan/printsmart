@@ -13,50 +13,60 @@ import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Pricing from './components/Pricing';
+import HandmadeGifts from './components/HandmadeGifts';
 
 import './index.css';
 
 export function App() {
   useEffect(() => {
-    // Add Inter font from Google Fonts
-    const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
+    // Font loading
+    const fontLink = document.createElement('link');
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+    fontLink.rel = 'stylesheet';
+    document.head.appendChild(fontLink);
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href') || '');
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
+    // Smooth scroll setup
+    const setupSmoothScroll = () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = anchor.getAttribute('href');
+          if (targetId) {
+            const target = document.querySelector(targetId);
+            target?.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
       });
-    });
-
-    // Intersection Observer for revealing sections on scroll
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
+    // Intersection Observer setup
+    const setupIntersectionObserver = () => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
 
-    document.querySelectorAll('section').forEach(section => {
-      section.classList.add('reveal-section');
-      observer.observe(section);
-    });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('reveal-section');
+        observer.observe(section);
+      });
+
+      return observer;
+    };
+
+    setupSmoothScroll();
+    const observer = setupIntersectionObserver();
 
     return () => {
       observer.disconnect();
@@ -67,14 +77,27 @@ export function App() {
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Inter, sans-serif' }}>
       <Navbar />
       <main>
+        {/* Core Printing Services */}
         <Hero />
-        <TrustedPartners />
-        <Features />
         <Services />
+        <Features />
         <Portfolio />
-        <About />
+
+        {/* Trust Building */}
+        <TrustedPartners />
         <Testimonials />
+
+        {/* Complementary Handmade Offerings */}
+        <HandmadeGifts />
+
+        {/* Decision Making Support */}
+        <Pricing />
         <FAQ />
+
+        {/* Company Background */}
+        <About />
+
+        {/* Conversion Sequence */}
         <Newsletter />
         <CTA />
         <Contact />
