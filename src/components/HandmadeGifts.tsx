@@ -1,4 +1,3 @@
-import React from 'react';
 import { ChevronRight, Gift, Sparkles } from 'lucide-react';
 
 const handmadeGifts = [
@@ -30,7 +29,6 @@ export default function HandmadeGiftSmart() {
   return (
     <section id="gift-collab" className="py-20 bg-gradient-to-b from-white via-rose-50 to-gray-50">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-1.5 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold tracking-wide mb-4">
             <Gift size={16} className="mr-2" /> In Collaboration with GiftSmart
@@ -43,7 +41,6 @@ export default function HandmadeGiftSmart() {
           </p>
         </div>
 
-        {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {handmadeGifts.map((item, index) => (
             <div
@@ -80,7 +77,6 @@ export default function HandmadeGiftSmart() {
           ))}
         </div>
 
-        {/* Custom CTA */}
         <div className="mt-20 text-center">
           <div className="inline-flex items-center gap-3 bg-white/90 backdrop-blur-md border border-gray-100 px-6 py-4 rounded-full shadow-sm">
             <Sparkles className="text-pink-500" />
@@ -90,7 +86,7 @@ export default function HandmadeGiftSmart() {
                 href="#contact"
                 className="ml-2 text-pink-600 font-medium hover:text-pink-700"
               >
-                Let’s collaborate
+                Let's collaborate
               </a>
             </p>
           </div>

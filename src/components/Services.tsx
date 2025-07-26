@@ -1,4 +1,4 @@
-import { Book, FileCheck, FileText, Image, LayoutDashboard, Package, Palette, Printer } from 'lucide-react';
+import { FileCheck, LayoutDashboard, Package, Printer } from 'lucide-react';
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
   {
     icon: <Package size={24} />,
     title: "Branded Packaging",
-    description: "Custom packaging solutions to elevate your product’s presentation and brand."
+    description: "Custom packaging solutions to elevate your product's presentation and brand."
   },
   {
     icon: <FileCheck size={24} />,
@@ -22,7 +22,6 @@ const services = [
     description: "Targeted print-mail strategies that deliver your message with precision."
   }
 ];
-
 
 export default function Services() {
   return (
@@ -73,4 +72,3 @@ export default function Services() {
     </section>
   );
 }
-

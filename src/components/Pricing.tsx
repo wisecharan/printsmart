@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Pricing = () => {
   const plans = [
     {
@@ -13,7 +11,7 @@ const Pricing = () => {
         'Email support'
       ],
       featured: false,
-      ctaText: 'Start with Standard' // Custom button text
+      ctaText: 'Start with Standard'
     },
     {
       name: 'Premium',
@@ -26,11 +24,10 @@ const Pricing = () => {
         'Priority support',
       ],
       featured: true,
-      ctaText: 'Get Premium' // Custom button text
+      ctaText: 'Get Premium'
     }
   ];
 
-  // Smooth scroll function
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -43,7 +40,6 @@ const Pricing = () => {
   return (
     <section id="pricing" className="py-10 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
-        {/* Enhanced Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Simple Plans, <span>Exceptional Value</span>
@@ -53,7 +49,6 @@ const Pricing = () => {
           </p>
         </div>
 
-        {/* Premium Card Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <div 
@@ -68,7 +63,6 @@ const Pricing = () => {
               )}
               
               <div className="p-8">
-                {/* Plan Header */}
                 <div className="mb-6">
                   <h3 className={`text-2xl font-bold mb-1 ${plan.featured ? 'text-pink-600' : 'text-gray-900'}`}>
                     {plan.name}
@@ -81,7 +75,6 @@ const Pricing = () => {
                   </div>
                 </div>
 
-                {/* Features List */}
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
@@ -102,7 +95,6 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                {/* CTA Button with redirect */}
                 <button
                   onClick={scrollToContact}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200
@@ -117,7 +109,6 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Enterprise CTA */}
         <div className="mt-5 text-center">
           <div className="inline-flex items-center bg-gray-50 rounded-full px-6 py-3">
             <span className="text-gray-600 mr-2">Need custom solutions?</span>
