@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import heroImage from '@/assets/images/hero.jpeg'; // Recommended approach
+import heroImage from '@/assets/images/hero.jpeg';
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -31,7 +31,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative overflow-hidden py-16 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-white via-rose-50 to-gray-50">
+    <section id="Hero" className="relative overflow-hidden py-16 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-white via-rose-50 to-gray-50">
       {/* Background shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-pink-50/60 to-rose-50/50" />
