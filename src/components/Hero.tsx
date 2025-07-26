@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import heroImage from '@/assets/images/hero.jpeg'; // Recommended approach
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -30,18 +31,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="Hero" className="relative overflow-hidden py-16 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-white via-rose-50 to-gray-50">
-      {/* Background shapes - updated to match GiftSmart aesthetic */}
+    <section id="hero" className="relative overflow-hidden py-16 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-white via-rose-50 to-gray-50">
+      {/* Background shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Soft gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-pink-50/60 to-rose-50/50" />
-        
-        {/* Blob shapes with reduced intensity */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-pink-100 rounded-full blur-xl opacity-15 mix-blend-multiply" />
         <div className="absolute top-1/3 right-0 w-96 h-96 bg-pink-100 rounded-full blur-xl opacity-10 mix-blend-multiply" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-rose-100 rounded-full blur-xl opacity-10 mix-blend-multiply" />
-        
-        {/* Subtle dot grid overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2716%27 height=%2716%27 viewBox=%270 0 16 16%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg fill=%27%23e5e7eb%27 fill-opacity=%270.2%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%271%27/%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
       </div>
 
@@ -63,7 +59,7 @@ export default function Hero() {
             </h1>
 
             <p className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 text-lg text-gray-600 leading-relaxed max-w-lg">
-              Elevate your brand with uncompromising quality and detail in every printed piece. Our cutting-edge technology delivers stunning results that captivate audiences.
+              Elevate your brand with uncompromising quality and detail in every printed piece.
             </p>
 
             {/* Buttons */}
@@ -94,6 +90,7 @@ export default function Hero() {
                       src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'women' : 'men'}/${i + 20}.jpg`}
                       className="w-10 h-10 rounded-full border-2 border-white hover:-translate-y-1 transition-transform duration-200"
                       alt="Client"
+                      loading="lazy"
                     />
                   ))}
                 </div>
@@ -101,44 +98,27 @@ export default function Hero() {
                   Trusted by Fortune 500
                 </span>
               </div>
-              <div className="hidden sm:block w-px h-10 bg-gray-200" />
-              <div className="flex items-center space-x-2">
-                <div className="flex -space-x-2">
-                  {['#FF6B6B', '#4ECDC4', '#45B7D1', '#A78BFA'].map((color, i) => (
-                    <div 
-                      key={i}
-                      className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center"
-                      style={{ backgroundColor: color }}
-                    >
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  ))}
-                </div>
-                <span className="text-sm font-medium text-gray-700">
-                  Award-Winning Quality
-                </span>
-              </div>
             </div>
           </div>
 
           {/* Right Column */}
           <div className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
-            {/* Main product image */}
+            {/* Main product image - now using imported image */}
             <div className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-500 absolute top-0 right-0 w-full max-w-2xl z-10">
               <img
-                src="public/hero.jpeg"
+                src={heroImage}
                 alt="Premium Print Product"
                 className="w-full h-auto drop-shadow-2xl rounded-2xl pointer-events-none animate-float"
+                width={800}
+                height={600}
+                loading="eager"
               />
             </div>
 
-            {/* Decorative shapes - updated colors */}
+            {/* Decorative shapes */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute w-64 h-64 bg-pink-100 rounded-full opacity-10 blur-xl left-0 top-0 mix-blend-multiply" />
               <div className="absolute w-80 h-80 bg-rose-100 rounded-full opacity-10 blur-xl right-0 bottom-0 mix-blend-multiply" />
-              <div className="absolute w-96 h-96 bg-pink-50 rounded-full opacity-5 blur-xl left-1/4 top-1/3 mix-blend-multiply" />
             </div>
           </div>
         </div>
