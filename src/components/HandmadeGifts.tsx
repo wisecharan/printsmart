@@ -1,25 +1,26 @@
 import { ChevronRight, Gift, Sparkles } from 'lucide-react';
 
 const handmadeGifts = [
-{
+  {
     name: 'Golden Pearl',
     description: 'Vibrant bangles intricately wrapped in colorful threads, symbolizing timeless Indian craftsmanship and tradition.',
     price: '₹249 – ₹799',
-    image: 'printsmart/public/goldenpearl.png',
+    image: '/goldenpearl.png',
   },
   {
     name: 'Pastel Whimsy',
     description: 'Exquisitely handcrafted clutch bags with intricate ethnic embroidery, perfect for weddings, festivals, and luxury gift sets.',
     price: '₹699 – ₹1,999',
-    image: 'printsmart/public/pastelwhimsy.png',
+    image: '/pastelwhimsy.png',
   },
   {
     name: 'Shiny Sling',
     description: 'Beautifully curated hampers combining premium handmade items, tailored to your brand or event theme.',
     price: '₹999 – ₹3,499',
-    image: 'printsmart/public/shinysling.png',
+    image: '/shinysling.png',
   },
 ];
+
 
 export default function HandmadeGiftSmart() {
   return (
