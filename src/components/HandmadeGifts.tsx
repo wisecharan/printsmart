@@ -1,29 +1,32 @@
 import { ChevronRight, Gift, Sparkles } from 'lucide-react';
 
 const handmadeGifts = [
-{
+  {
     name: 'Golden Pearl',
     description: 'Vibrant bangles intricately wrapped in colorful threads, symbolizing timeless Indian craftsmanship and tradition.',
     price: '₹249 – ₹799',
-    image: 'public/goldenpearl.png',
+    image: '/goldenpearl.png', // Consider compressing or using .webp
   },
   {
     name: 'Pastel Whimsy',
     description: 'Exquisitely handcrafted clutch bags with intricate ethnic embroidery, perfect for weddings, festivals, and luxury gift sets.',
     price: '₹699 – ₹1,999',
-    image: 'public/pastelwhimsy.png',
+    image: '/pastelwhimsy.png',
   },
   {
     name: 'Shiny Sling',
     description: 'Beautifully curated hampers combining premium handmade items, tailored to your brand or event theme.',
     price: '₹999 – ₹3,499',
-    image: 'public/shinysling.png',
+    image: '/shinysling.png',
   },
 ];
 
 export default function HandmadeGiftSmart() {
   return (
-    <section id="gift-collab" className="py-20 bg-gradient-to-b from-white via-rose-50 to-gray-50">
+    <section
+      id="gift-collab"
+      className="py-20 bg-gradient-to-b from-white via-rose-50 to-gray-50"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-1.5 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold tracking-wide mb-4">
@@ -33,7 +36,8 @@ export default function HandmadeGiftSmart() {
             Elegant Handcrafted Gifting Solutions
           </h2>
           <p className="mt-4 text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-            Celebrate craftsmanship with beautifully packaged handmade products — exclusively with GiftSmart.
+            Celebrate craftsmanship with beautifully packaged handmade products —
+            exclusively with GiftSmart.
           </p>
         </div>
 
@@ -47,21 +51,28 @@ export default function HandmadeGiftSmart() {
                 <img
                   src={item.image}
                   alt={item.name}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-base md:text-lg font-semibold text-gray-800">{item.name}</h3>
+                  <h3 className="text-base md:text-lg font-semibold text-gray-800">
+                    {item.name}
+                  </h3>
                   <span className="bg-pink-50 text-pink-600 text-xs font-medium px-3 py-1 rounded-full">
                     By GiftSmart
                   </span>
                 </div>
-                <p className="text-sm md:text-base text-gray-600 mb-4">{item.description}</p>
+                <p className="text-sm md:text-base text-gray-600 mb-4">
+                  {item.description}
+                </p>
                 <div className="flex justify-between items-center">
                   <span className="text-pink-600 font-medium">{item.price}</span>
                   <button
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() =>
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                    }
                     className="flex items-center text-sm font-semibold text-white bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-md transition"
                   >
                     Enquire
