@@ -5,19 +5,19 @@ const handmadeGifts = [
     name: 'Golden Pearl',
     description: 'Vibrant bangles intricately wrapped in colorful threads, symbolizing timeless Indian craftsmanship and tradition.',
     price: '₹249 – ₹799',
-    image: '/goldenpearl.png', // Consider compressing or using .webp
+    image: '/1.png',
   },
   {
     name: 'Pastel Whimsy',
     description: 'Exquisitely handcrafted clutch bags with intricate ethnic embroidery, perfect for weddings, festivals, and luxury gift sets.',
     price: '₹699 – ₹1,999',
-    image: '/pastelwhimsy.png',
+    image: '/2.png',
   },
   {
     name: 'Shiny Sling',
     description: 'Beautifully curated hampers combining premium handmade items, tailored to your brand or event theme.',
     price: '₹999 – ₹3,499',
-    image: '/shinysling.png',
+    image: '/3.png',
   },
 ];
 
