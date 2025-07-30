@@ -14,42 +14,42 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     title: "Premium Business Cards",
     category: "Business Essentials",
-    imageUrl: "https://images.unsplash.com/photo-1560177112-fbfd5fde9566?w=800&auto=format&fit=crop&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1718670013921-2f144aba173a?q=80&w=1060&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Embossed metallic business cards with custom finishes for Nexus Financial."
   },
   {
     id: 2,
-    title: "Annual Report Design",
+    title: "Brochure Design",
     category: "Corporate Materials",
-    imageUrl: "https://plus.unsplash.com/premium_photo-1661609137987-8e2822d180d7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Premium annual report with custom binding and foil treatments."
+    imageUrl: "https://images.unsplash.com/photo-1556943418-0e5712249b9d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Premium tri-fold and bi-fold brochures for impactful brand presentation."
   },
   {
     id: 3,
-    title: "Trade Show Display",
+    title: "Large Format Banners",
     category: "Large Format",
-    imageUrl: "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=800&auto=format&fit=crop&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1600320844678-43cebba1cdfe?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "10-foot backlit display for Horizon Tech's industry conference."
   },
   {
     id: 4,
     title: "Luxury Product Packaging",
     category: "Packaging",
-    imageUrl: "https://images.unsplash.com/photo-1586339949216-35c2747cc36d?w=800&auto=format&fit=crop&q=80",
+    imageUrl: "https://plus.unsplash.com/premium_photo-1747956187589-f7fe4dfc021f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Custom box with embossed logo and magnetic closure for premium skincare line."
   },
   {
     id: 5,
     title: "Restaurant Menu Design",
     category: "Marketing Materials",
-    imageUrl: "https://images.unsplash.com/photo-1551645120-d70bfe84c826?w=800&auto=format&fit=crop&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1673558198198-548f5216c450?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Elegant menu design with specialty paper and custom binding for upscale bistro."
   },
   {
     id: 6,
     title: "Custom Magazine",
     category: "Publication",
-    imageUrl: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&auto=format&fit=crop&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1578079815667-b90e1e0cb941?q=80&w=778&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Quarterly lifestyle magazine with premium finishes and special edition cover."
   }
 ];

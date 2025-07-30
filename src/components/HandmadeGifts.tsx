@@ -1,27 +1,23 @@
 import { ChevronRight, Gift, Sparkles } from 'lucide-react';
 
 const handmadeGifts = [
-  {
-    name: 'Thread Bangles',
-    description:
-      'Vibrant bangles intricately wrapped in colorful threads, symbolizing timeless Indian craftsmanship and tradition.',
-    price: '₹299 – ₹899',
-    image:
-      'https://vrikshamindia.com/cdn/shop/files/IMG_3683_1d66e98c-2496-40f1-8431-27e3b0cc20ca_1066x.jpg?v=1737543249',
+{
+    name: 'Golden Pearl',
+    description: 'Vibrant bangles intricately wrapped in colorful threads, symbolizing timeless Indian craftsmanship and tradition.',
+    price: '₹249 – ₹799',
+    image: 'public/goldenpearl.png',
   },
   {
-    name: 'Ethnic Potlis',
-    description:
-      'Exquisitely handcrafted clutch bags with intricate ethnic embroidery, perfect for weddings, festivals, and luxury gift sets.',
-    price: '₹599 – ₹1,499',
-    image: 'https://shop.globalbees.com/cdn/shop/files/jtk8aadonjclp80w14qo.jpg?v=1739940992',
+    name: 'Pastel Whimsy',
+    description: 'Exquisitely handcrafted clutch bags with intricate ethnic embroidery, perfect for weddings, festivals, and luxury gift sets.',
+    price: '₹699 – ₹1,999',
+    image: 'public/pastelwhimsy.png',
   },
   {
-    name: 'Custom Hampers',
-    description:
-      'Beautifully curated hampers combining premium handmade items, tailored to your brand or event theme.',
-    price: '₹1,199 – ₹3,999',
-    image: 'https://advaitliving.com/cdn/shop/products/14.jpg?v=1664037753',
+    name: 'Shiny Sling',
+    description: 'Beautifully curated hampers combining premium handmade items, tailored to your brand or event theme.',
+    price: '₹999 – ₹3,499',
+    image: 'public/shinysling.png',
   },
 ];
 

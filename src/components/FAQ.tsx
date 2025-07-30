@@ -77,11 +77,11 @@ export default function FAQ() {
                 </span>
               </button>
               <div 
-                className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                  openItem === index ? 'max-h-96 pb-5' : 'max-h-0'
+                className={`px-6 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                  openItem === index ? 'max-h-[500px] pb-5 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <p className="text-gray-600">{item.answer}</p>
+                <div className="pb-2 text-gray-600">{item.answer}</div>
               </div>
             </div>
           ))}

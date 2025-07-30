@@ -93,26 +93,26 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-center text-sm text-gray-500">
-            © {currentYear} PrintSmart. All rights reserved.
-          </p>
-
-          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-500 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-            <a
-              href="https://www.linkedin.com/in/wisecharan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-pink-400 transition-colors"
-            >
-              Built by <span className="text-pink-400">Char</span>
-            </a>
+        
+        <div className="pt-8 border-t border-gray-800 text-center">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0">
+            <p className="text-xs text-gray-500">
+              © {currentYear} PrintSmart. All rights reserved.
+            </p>
+            <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+              <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
+              <a
+                href="https://www.linkedin.com/in/wisecharan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-pink-400 transition-colors"
+              >
+                Built by <span className="text-pink-400">Char</span>
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
     </footer>
   );
