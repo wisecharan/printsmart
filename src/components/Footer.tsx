@@ -95,11 +95,11 @@ export default function Footer() {
         </div>
         
         <div className="pt-8 border-t border-gray-800 text-center">
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0">
-            <p className="text-xs text-gray-500">
+          <div className="flex flex-col md:flex-row md:justify-between items-center text-xs text-gray-500 gap-2">
+            <p className="text-center md:text-left">
               © {currentYear} PrintSmart. All rights reserved.
             </p>
-            <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+            <div className="flex items-center space-x-4">
               <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
               <a
@@ -112,6 +112,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </footer>
