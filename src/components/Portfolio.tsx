@@ -26,10 +26,10 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 3,
-    title: "Large Format Banners",
-    category: "Large Format",
-    imageUrl: "https://images.unsplash.com/photo-1600320844678-43cebba1cdfe?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "10-foot backlit display for Horizon Tech's industry conference."
+    title: "T-Shirt Printing",
+    category: "Custom Apparel",
+    imageUrl: "https://images.unsplash.com/photo-1727204898451-2912cdcc208f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Vibrant custom-printed t-shirts for brand promotion and team identity."
   },
   {
     id: 4,
@@ -47,12 +47,13 @@ const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 6,
-    title: "Custom Magazine",
-    category: "Publication",
-    imageUrl: "https://images.unsplash.com/photo-1578079815667-b90e1e0cb941?q=80&w=778&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Quarterly lifestyle magazine with premium finishes and special edition cover."
+    title: "Premium ID Card",
+    category: "Smart Identification",
+    imageUrl: "https://images.template.net/21001/Creative-Employee-ID-Card-Template.jpg",
+    description: "Modern ID card with embedded QR code for secure, digital access and verification."
   }
 ];
+
 
 const categories = [
   "All",

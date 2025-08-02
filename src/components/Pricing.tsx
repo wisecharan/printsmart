@@ -5,9 +5,9 @@ const Pricing = () => {
       price: '₹1,999',
       period: '/month',
       features: [
-        '100 high-quality prints',
+        'High-quality prints',
         'Standard paper options',
-        '3-day turnaround',
+        '3-days turnaround',
         'Email support'
       ],
       featured: false,
@@ -15,12 +15,12 @@ const Pricing = () => {
     },
     {
       name: 'Premium',
-      price: '₹4,499',
+      price: '₹4,999',
       period: '/month',
       features: [
-        'Unlimited prints',
+        'Commercial-grade print quality',
         'Premium & specialty paper',
-        '24-hour turnaround',
+        '48-hours turnaround',
         'Priority support',
       ],
       featured: true,

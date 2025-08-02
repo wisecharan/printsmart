@@ -26,7 +26,7 @@ export default function Footer() {
                 <Instagram size={18} />
               </a>
               <a
-                href="mailto:printsmart@gmail.com"
+                href="mailto:printsmart.contact@gmail.com"
                 className="text-gray-400 hover:text-pink-400 transition-colors w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700"
                 aria-label="Email"
               >
@@ -71,17 +71,9 @@ export default function Footer() {
                 <Phone size={18} className="text-pink-400 mr-3 mt-1" />
                 <span className="text-gray-400">+91 85009-69690</span>
               </li>
+
               <li className="flex items-start">
-                <Mail size={18} className="text-pink-400 mr-3 mt-1" />
-                <a
-                  href="mailto:printsmart@gmail.com"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  printsmart@gmail.com
-                </a>
-              </li>
-              <li className="flex items-start">
-                <MapPin size={18} className="text-pink-400 mr-3 mt-1" />
+                <MapPin size={30} className="text-pink-400 mr-3 mt-1" />
                 <span className="text-gray-400">TSHB shop No: 03, Vidyanagar SRT 47</span>
               </li>
             </ul>

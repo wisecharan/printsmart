@@ -101,7 +101,7 @@ export default function Contact() {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-1">Email Us</h4>
                     <a
-                      href="mailto:printsmart@gmail.com"
+                      href="mailto:printsmart.contact@gmail.com"
                       className="text-gray-600 hover:underline"
                     >
                       printsmart.contact@gmail.com
