@@ -104,7 +104,7 @@ export default function Contact() {
                       href="mailto:printsmart@gmail.com"
                       className="text-gray-600 hover:underline"
                     >
-                      printsmart@gmail.com
+                      printsmart.contact@gmail.com
                     </a>
                     <p className="text-gray-500 text-sm mt-1">Replies within 24 hours</p>
                   </div>
@@ -128,7 +128,7 @@ export default function Contact() {
             {/* Offer Box (Optional) */}
             <div className="mt-12 p-8 bg-pink-500 rounded-3xl text-white shadow-lg">
               <h4 className="text-xl font-bold mb-4">Special Offer</h4>
-              <p className="mb-6">Get 15% off on your first print order above ₹500. Use code: FIRSTPRINT</p>
+              <p className="mb-6">Get 15% off on your first print order above ₹999. Use code: FIRSTPRINT</p>
               <a
                 href={whatsappLink}
                 target="_blank"
