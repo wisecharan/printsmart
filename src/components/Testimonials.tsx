@@ -5,7 +5,7 @@ const testimonials = [
     quote: "PrintSmart delivered exceptional quality for our corporate brochures. Their attention to detail and premium finishes impressed our entire executive team.",
     name: "Sai Charan Puduthala",
     role: "Developer, Webrakor",
-    image: "public/charan.jpeg"
+    image: "/public/charan.jpeg"
   },
   {
     quote: "They made custom batches for our Origin Club. The print quality and consistency truly elevated our presentation and made a strong impression.",
