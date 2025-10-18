@@ -4,14 +4,14 @@ const testimonials = [
   {
     quote: "PrintSmart delivered exceptional quality for our corporate brochures. Their attention to detail and premium finishes impressed our entire executive team.",
     name: "Sai Charan Puduthala",
-    role: "Web Developer, Cwkr & Co.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQF702Z9DrxliQ/profile-displayphoto-shrink_200_200/B4DZaMjmAgHQAY-/0/1746114869141?e=2147483647&v=beta&t=xWvft4y3zJGJk2VujtFiZf8dQQ3IR_YW8B0vqe_BjvI"
+    role: "Developer, Webrakor",
+    image: "public/charan.jpeg"
   },
   {
     quote: "They made custom batches for our Origin Club. The print quality and consistency truly elevated our presentation and made a strong impression.",
     name: "Origin Club",
     role: "St. Peters Engg College, Hyd",
-    image: "https://media.licdn.com/dms/image/v2/D4D0BAQHRCj6LDld7dQ/company-logo_100_100/company-logo_100_100/0/1737621566109/spec_origin_logo?e=1757548800&v=beta&t=2KYSOi1vUoq51CeAcZgo1aNHGCaBJIgRAWTxe5SDH3E"
+    image: "/public/origin.jpg" 
   },
   {
     quote: "We are very happy with the printing services provided by PrintSmart. The quality of our hospital materials, from patient guides to banners was excellent.",

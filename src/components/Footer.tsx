@@ -95,12 +95,12 @@ export default function Footer() {
               <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
               <a
-                href="https://www.linkedin.com/in/wisecharan/"
+                href="https://www.webrakor.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-400 transition-colors"
               >
-                Built by <span className="text-pink-400">Char</span>
+                Built by <span className="text-pink-400">Webrakor</span>
               </a>
             </div>
           </div>
