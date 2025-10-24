@@ -2,9 +2,9 @@ import logo from '@/assets/images/Logo-01.jpg';
 
 export default function About() {
   const videos = [
-    { id: 1, title: "Printing Process", src: "/public/one.mp4" },
-    { id: 2, title: "Project Showcase", src: "/public/two.mp4" },
-    { id: 3, title: "Quality Control", src: "/public/three.mp4" },
+    { id: 1, title: "Printing Process", src: "/one.mp4" },
+    { id: 2, title: "Project Showcase", src: "/two.mp4" },
+    { id: 3, title: "Quality Control", src: "/three.mp4" },
   ];
 
   return (
@@ -81,7 +81,7 @@ export default function About() {
             ))}
           </div>
 
-          {/* Mobile: Horizontal scroll, no dots */}
+          {/* Mobile: Horizontal scroll */}
           <div className="md:hidden flex gap-4 overflow-x-auto py-2 px-2 scroll-smooth">
             {videos.map((video) => (
               <video
