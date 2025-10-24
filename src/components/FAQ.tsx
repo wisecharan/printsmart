@@ -51,47 +51,81 @@ export default function FAQ() {
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">
+        {/* YouTube Video Section */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-gray-900 mb-3 md:mb-4">
+              See Our Process in Action
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+              Watch how we bring your print projects to life with precision and care
+            </p>
+          </div>
+          
+          {/* Mobile-optimized video container */}
+          <div className="px-2 md:px-0">
+            <div className="relative w-full overflow-hidden rounded-xl md:rounded-2xl shadow-lg bg-gray-900">
+              <div className="relative aspect-video w-full">
+                <iframe 
+                  src="https://www.youtube.com/embed/-IGz6L2485U?si=CgOCfsOfH-Gl-lWs" 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-gray-900">
             Frequently Asked Questions
           </h2>
-          <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Find answers to common questions about our printing services
           </p>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4 px-2 md:px-0">
           {faqItems.map((item, index) => (
             <div 
               key={index}
-              className="border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md bg-white/90 backdrop-blur-sm"
+              className="border border-gray-200 rounded-lg md:rounded-xl overflow-hidden shadow-sm transition-all duration-200 hover:shadow-md bg-white/90 backdrop-blur-sm"
             >
               <button
-                className="w-full px-6 py-5 flex justify-between items-center text-left hover:bg-gray-50 transition-colors"
+                className="w-full px-4 md:px-6 py-4 md:py-5 flex justify-between items-center text-left hover:bg-gray-50 transition-colors"
                 onClick={() => toggleItem(index)}
                 aria-expanded={openItem === index}
               >
-                <span className="text-lg font-medium text-gray-900">{item.question}</span>
-                <span className="ml-4 flex-shrink-0 text-gray-600">
-                  {openItem === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                <span className="text-base md:text-lg font-medium text-gray-900 pr-2 md:pr-0">
+                  {item.question}
+                </span>
+                <span className="ml-2 md:ml-4 flex-shrink-0 text-gray-600">
+                  {openItem === index ? <ChevronUp size={18} className="md:w-5 md:h-5" /> : <ChevronDown size={18} className="md:w-5 md:h-5" />}
                 </span>
               </button>
               <div 
-                className={`px-6 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                  openItem === index ? 'max-h-[500px] pb-5 opacity-100' : 'max-h-0 opacity-0'
+                className={`px-4 md:px-6 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                  openItem === index ? 'max-h-[500px] pb-4 md:pb-5 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="pb-2 text-gray-600">{item.answer}</div>
+                <div className="pb-2 text-gray-600 text-sm md:text-base leading-relaxed">
+                  {item.answer}
+                </div>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
+        <div className="mt-12 text-center px-4">
+          <p className="text-gray-600 mb-4 text-base md:text-lg">Still have questions?</p>
           <a 
             href="#contact" 
-            className="text-pink-600 hover:text-pink-700 font-medium transition-colors"
+            className="text-pink-600 hover:text-pink-700 font-medium transition-colors text-base md:text-lg"
           >
             Contact our team for personalized assistance
           </a>
