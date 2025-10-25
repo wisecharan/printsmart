@@ -1,38 +1,24 @@
-import { useEffect, useRef, useState } from 'react';
-import logo from '@/assets/images/Logo-01.jpg';
-
 export default function About() {
   const videos = [
-    { id: 1, title: "Printing Process", src: "/one.mp4" },
-    { id: 2, title: "Project Showcase", src: "/two.mp4" },
-    { id: 3, title: "Quality Control", src: "/three.mp4" },
+    { 
+      id: 1, 
+      title: "Printing Process", 
+      src: "/one.mp4", 
+      poster: "/thumbnails/1.png"
+    },
+    { 
+      id: 2, 
+      title: "Project Showcase", 
+      src: "/two.mp4", 
+      poster: "/thumbnails/2.png"
+    },
+    { 
+      id: 3, 
+      title: "Quality Control", 
+      src: "/three.mp4", 
+      poster: "/thumbnails/3.png"
+    },
   ];
-
-  const [posters, setPosters] = useState<string[]>([]);
-
-  useEffect(() => {
-    // Generate poster for each video
-    videos.forEach((video, index) => {
-      const vid = document.createElement('video');
-      vid.src = video.src;
-      vid.crossOrigin = 'anonymous';
-      vid.addEventListener('loadeddata', () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = vid.videoWidth;
-        canvas.height = vid.videoHeight;
-        const ctx = canvas.getContext('2d');
-        if (ctx) {
-          ctx.drawImage(vid, 0, 0, canvas.width, canvas.height);
-          const dataURL = canvas.toDataURL();
-          setPosters(prev => {
-            const arr = [...prev];
-            arr[index] = dataURL;
-            return arr;
-          });
-        }
-      });
-    });
-  }, []);
 
   return (
     <section id="about" className="py-16 px-6 sm:py-20 sm:px-8 lg:py-28 lg:px-12 bg-white">
@@ -48,11 +34,11 @@ export default function About() {
 
           {/* Desktop */}
           <div className="hidden md:flex gap-6 overflow-x-auto max-w-full mx-auto justify-center">
-            {videos.map((video, i) => (
+            {videos.map((video) => (
               <video
                 key={video.id}
                 src={video.src}
-                poster={posters[i]}
+                poster={video.poster}
                 controls
                 controlsList="nodownload"
                 disablePictureInPicture
@@ -63,11 +49,11 @@ export default function About() {
 
           {/* Mobile */}
           <div className="md:hidden flex gap-4 overflow-x-auto py-2 px-2 scroll-smooth">
-            {videos.map((video, i) => (
+            {videos.map((video) => (
               <video
                 key={video.id}
                 src={video.src}
-                poster={posters[i]}
+                poster={video.poster}
                 controls
                 controlsList="nodownload"
                 disablePictureInPicture
